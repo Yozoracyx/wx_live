@@ -1,0 +1,97 @@
+<view class="containerView">
+  <view class='userInfo'>
+    <view class='userHeadImg'>
+      <image src='{{avatarUrl}}'></image>
+    </view>
+    <view class='userNickname'>
+      {{userName}}
+    </view>
+  </view>
+  <view class='allPlayList'>
+    <view class='allPlayListTitleView'>
+      <view class='allPlayListTitleImg'>
+        <image src='../../images/player.png'></image>
+      </view>
+      <view class='allPlayListTitle'>
+        正在直播
+      </view>
+      <!-- <view class='morePlay'>
+        更多>
+      </view> -->
+    </view>
+    <view class='allPlayListItem' hidden="{{hiddenPlayingLive}}" wx:for="{{allPlayListArray}}" id="{{item.roomid}}" bindtap="searchAllPlay" wx:key="roomid">
+      <view class='allPlayListItemImg'>
+        <view class='allPlayListItemCate'>
+          {{item.type}}
+        </view>
+        <image src='{{item.coverSrc}}'></image>
+        <view class='allPlayListItem-detail'>
+          <view class='allPlayListItem-detail-playerName'>
+            {{item.anchorName}}
+          </view>
+          <view class='allPlayListItem-detail-Num'>
+            <image src='../../images/num.png'></image>
+            <text>{{item.onlinenum}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='allPlayListItemTitle'>
+        {{item.title}}
+      </view>
+    </view>
+    <view class='allPlayListItem empty' hidden="{{!hiddenPlayingLive}}">
+      空空如也...
+    </view>
+  </view>
+  <view class='allPlayList'>
+    <view class='allPlayListTitleView'>
+      <view class='allPlayListTitleImg'>
+        <image src='../../images/unLive.png'></image>
+      </view>
+      <view class='allPlayListTitle'>
+        未开播
+      </view>
+
+      <!-- <view class='morePlay'>
+        更多>
+      </view> -->
+    </view>
+    <view class='allPlayerList' hidden="{{hiddenPlayer}}">
+      <view class='playerListItem' wx:for="{{playerArray}}" id="{{item.roomid}}" bindtap="searchPlayer" wx:key="roomid">
+        <view class='playerListItemImg'>
+          <image src='{{item.avatarurl}}'></image>
+        </view>
+        <view class='playerListItemText'>
+          <view class='playerName playeItemrDetail'>{{item.nickname}}</view>
+          <view class='playerDetail playeItemrDetail'>{{item.playerTime}} 直播了 {{item.playerGame}}</view>
+          <view class='playerFansAndRoomId playeItemrDetail'>粉丝数: {{item.subscribeNum}} 房间号: {{item.roomid}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='allPlayListItem empty' hidden="{{!hiddenPlayer}}">
+      空空如也...
+    </view>
+  </view>
+</view>
+
+
+
+
+<!--index.wxml-->
+<!-- <view class="container"> -->
+<!-- <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+    <button bindtap='doLogin'>登录</button>
+  </view>
+   <view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" lang="zh_CN">获取用户信息</button> 
+  </view> -->
+<!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+<!-- </view> -->

@@ -1,0 +1,489 @@
+view, text {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hiddenView {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  z-index: 2;
+}
+
+.fullScreenHiddenView {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.audioViewContain {
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+
+.audioView {
+  width: 100%;
+  height: 400rpx;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+}
+
+.bottomView, .topView {
+  position: absolute;
+  width: 100%;
+  height: 80rpx;
+  background-color: black;
+  opacity: 0.6;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 3;
+}
+
+.topView {
+  top: 0;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.minAndMaxView, .playAndStopView {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 2%;
+}
+
+.view-wrap {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.minAndMax, .playAndStop {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.playAndStopView {
+  left: 2%;
+}
+
+.liveNumView {
+  width: 250rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  left: 10%;
+}
+
+.liveNumView cover-image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.liveNum {
+  color: white;
+  font-size: 35rpx;
+}
+
+.clearView {
+  width: 120rpx;
+  height: 60rpx;
+  border: 0.5rpx white solid;
+  box-sizing: border-box;
+  border-radius: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: white;
+  margin-left: 85%;
+}
+
+.danmakuItem {
+  position: absolute;
+  top: 0px;
+  width: 400rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  /* border: 1px solid white; */
+  color: white;
+  z-index: 3;
+  overflow: hidden;
+  left: 750rpx;
+}
+
+.test {
+  position: absolute;
+  top: 0px;
+  width: 400rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1px solid white;
+  color: white;
+  z-index: 5;
+}
+
+.navView {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 0.1px solid #ffb5b5;
+  background-color: #ff8000;
+}
+
+.navItem {
+  width: 33.3%;
+  text-align: center;
+  line-height: 120rpx;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.subscriptView {
+  background-color: #ff8000;
+  border-bottom: 0px solid #ff8000;
+}
+
+.subscriptItemView image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.subscriptItemView {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.subscriptDetailView {
+  margin-left: 5%;
+  color: white;
+  font-size: 37rpx;
+  font-weight: bold;
+}
+
+.fansNum {
+  width: 100%;
+  height: 10rpx;
+  text-align: center;
+  line-height: 10rpx;
+  font-size: 35rpx;
+  color: white;
+  /* border: 1rpx solid black; */
+}
+
+.danmakuListView {
+  width: 100%;
+  height: 530rpx;
+  overflow: hidden;
+  margin-top: 15rpx;
+}
+
+.danmakuListItem {
+  margin-left: 2%;
+  width: 95%;
+  min-height: 20px;
+  /* border: 1px solid black; */
+}
+
+.danmakuListItem text {
+  color: #66b3ff;
+}
+
+.danmakuSubmitView {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10rpx;
+  border-top: 0.1px gainsboro solid;
+  background-color: white;
+  box-sizing: content-box;
+}
+
+.introView {
+  min-height: 630rpx;
+}
+
+.liverHeadImgAndNameView {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 0.5rpx #d0d0d0 solid;
+}
+
+.liverHeadImg {
+  width: 150rpx;
+  height: 150rpx;
+  /* border: 1rpx black solid; */
+  border-radius: 150rpx;
+  margin-left: 7%;
+  overflow: hidden;
+}
+
+.liverHeadImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.liverName {
+  width: 300rpx;
+  height: 120rpx;
+  margin-left: 12%;
+  /* border: 1rpx black solid; */
+}
+
+.liverNameItem {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+
+.liverTypeItem {
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #7b7b7b;
+}
+
+.liverIntroView {
+  width: 100%;
+  min-height: 200rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1rpx #d0d0d0 solid;
+}
+
+.liverIntroViewTitle {
+  width: 82%;
+  height: 60rpx;
+  font-size: 37rpx;
+  margin-top: 20rpx;
+  color: black;
+  /* border-bottom: 1rpx #d0d0d0 solid; */
+}
+
+.liverIntroViewContent {
+  width: 82%;
+  color: #ADADAD;
+  font-size: 32rpx;
+  overflow: hidden;
+  display: flex;
+  padding-bottom: 30rpx;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+.liverRecordView {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40rpx;
+  /* border: 1rpx black solid; */
+}
+
+.liverRecordContent {
+  margin-top: 30rpx;
+}
+
+video {
+  width: 210px;
+  height: 119px;
+  margin-top: 30rpx;
+}
+.videoLoading{
+  width: 210px;
+  height: 119px;
+  margin-top: 30rpx;
+  background-color: black;
+  text-align: center;
+  line-height: 119px;
+  color: white;
+  font-size: 30rpx;
+}
+
+input {
+  margin-left: 10rpx;
+  width: 550rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+  background-color: white;
+}
+
+button {
+  margin-top: 10rpx;
+  right: 10rpx;
+  width: 180rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+@keyframes first {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+cover-image {
+  width: 100%;
+  height: 100%;
+}
+
+cover-view {
+  padding: 0;
+  margin: 0;
+}
+
+.fullScreenRightView {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 400rpx;
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.fullScreenBottomView, .fullScreenTopView {
+  height: 100%;
+  width: 80rpx;
+  /* border: 1rpx white solid; */
+}
+
+.fullScreenBottomView {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 10rpx;
+}
+
+.fullScreenBottomPlayAndStopView, .fullScreenBottomSmallView {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.fullScreenTopView {
+  width: 100rpx;
+  margin-right: 10rpx;
+}
+
+.fullScreenLineView {
+  color: white;
+  height: 100rpx;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  /* border: 1rpx white solid; */
+  margin-top: 25rpx;
+}
+
+.is_checked {
+  color: #ff8000;
+}
+
+.normal {
+  color: white;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -moz-transform: rotate(90deg); /* Firefox */
+  -webkit-transform: rotate(90deg); /* Safari and Chrome */
+  -o-transform: rotate(90deg); /* Opera */
+}
+
+.clearListView {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clearViewListItem {
+  width: 400rpx;
+  height: 80rpx;
+  /* border: 1rpx white solid; */
+  display: flex;
+  margin-bottom: 10rpx;
+}
+
+.clearListViewLine {
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* border: 1rpx white solid; */
+  margin-right: 10rpx;
+}
+
+.fullScreenDanmakuSubmit {
+  /* border: 1rpx white solid; */
+  margin-left: 30%;
+  width: 45%;
+  height: 60rpx;
+  padding: 0;
+  display: flex;
+}
+
+.fullScreenDanmakuSubmit input {
+  width: 0;
+  margin: 0;
+}
+
+.fullScreenDanmakuContent {
+  width: 100%;
+  height: 100%;
+  line-height: 60rpx;
+  color: black;
+  font-size: 38rpx;
+  border-radius: 15rpx;
+  padding-left: 10rpx;
+  background-color: white;
+}

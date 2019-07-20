@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='logo'>
+    <image src='../../images/logo.jpg'></image>
+  </view>
+  <view class='login' wx:if="{{isRegister}}">
+    <image src='../../images/welcome.png'></image>
+  </view>
+  <view class='login' wx:else>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" lang="zh_CN">微信登录</button>
+  </view>
+</view>

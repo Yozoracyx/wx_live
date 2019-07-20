@@ -1,0 +1,4 @@
+<view class='aaa'>
+  <input placeholder="说点什么吧..." value="{{inputValue}}" bindinput='danmakuInput' />
+  <button type="default" bindtap="btnClick">发送</button>
+</view>

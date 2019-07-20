@@ -1,0 +1,218 @@
+view {
+  box-sizing: border-box;
+}
+
+.inputView {
+  margin: auto;
+  width: 96%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+  color: #bebebe;
+  font-size: 26rpx;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.playListView {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 340rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.playListItem {
+  box-sizing: border-box;
+  width: 149rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.playListItemImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.playListItemTitle {
+  width: 100%;
+  margin-top: 5rpx;
+  height: 30rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #6c6c6c;
+}
+
+.allPlayList {
+  width: 100%;
+  /* min-height: 400rpx; */
+  height: auto;
+  margin-top: 10rpx;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+
+.allPlayListTitleView {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+}
+
+.allPlayListTitleImg {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 3%;
+}
+
+.allPlayListTitle {
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-left: 1%;
+  font-size: 35rpx;
+  font-weight: bolder;
+  font-family: "Microsoft YaHei";
+}
+
+.morePlay {
+  width: 75rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-left: 59%;
+  font-size: 28rpx;
+  color: #bebebe;
+}
+
+.allPlayListItem {
+  width: 350rpx;
+  height: 240rpx;
+  margin: 0 10rpx 20rpx 10rpx;
+}
+.hiddenAllPlayListItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bebebe;
+  height: 160rpx;
+  width: 100%;
+}
+
+.allPlayListItemImg {
+  width: 100%;
+  height: 185rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+  /* border: 0.1px black solid; */
+}
+
+.allPlayListItemCate {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 2;
+  padding: 10rpx;
+  color: white;
+  font-size: 25rpx;
+  border-radius: 8rpx;
+  right: 5rpx;
+}
+
+.allPlayListItem-detail {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 40rpx;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allPlayListItem-detail-playerName {
+  color: #d0d0d0;
+  font-size: 25rpx;
+  margin-left: 15rpx;
+  width: 60%;
+  height: 40rpx;
+}
+
+.allPlayListItem-detail-Num {
+  width: 30%;
+  height: 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.allPlayListItem-detail-Num image {
+  margin-top: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.allPlayListItem-detail-Num text {
+  color: #d0d0d0;
+  font-size: 20rpx;
+}
+
+.allPlayListItemImg>image {
+  position: absolute;
+  z-index: 1;
+}
+
+.allPlayListItemTitle {
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 27rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+
+
+
+
+
+
+
+/* .page-body-button {
+  margin-bottom: 30rpx;
+}
+
+live-player {
+  width: 100%;
+  height: 225px;
+}
+.max,.min{
+  color: white;
+  font-size: 20px;
+}
+.statusCodeListView{
+  width: 100%;
+  height: 310rpx;
+  background-color: yellow;
+}
+.statusCodeListItem{
+  width: 100%;
+  height: 20rpx;
+} */

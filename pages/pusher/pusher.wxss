@@ -1,0 +1,340 @@
+cover-view {
+  box-sizing: border-box;
+}
+
+.titleView {
+  width: 100%;
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+  position: relative;
+}
+
+.pusherStatus {
+  position: absolute;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  top: 100rpx;
+  left: 2%;
+  font-size: 30rpx;
+}
+
+.success {
+  color: #28ff28;
+}
+
+.fail {
+  color: #ff2d2d;
+}
+
+.editView {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  /* border: 1rpx white solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editView_middle {
+  left: 200px;
+}
+
+.editView cover-image {
+  width: 27px;
+  height: 27px;
+}
+
+.page-section {
+  position: relative;
+  width: 100%;
+}
+
+live-pusher {
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  z-index: 2;
+  width: 170px;
+  /* border: 1px white solid; */
+  height: 30px;
+  line-height: 30px;
+  font-size: 42rpx;
+  color: white;
+  top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title_middle {
+  left: 20px;
+}
+
+.view-wrap {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  /* border: 1rpx white solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-wrap cover-image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.switchCamera {
+  position: absolute;
+  z-index: 2;
+  top: 80px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  /* border: 1rpx white solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switchCamera cover-image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.danmakuListContainerViewPusher {
+  position: absolute;
+  z-index: 2;
+  width: 180px;
+  height: 180px;
+  /* bottom: 40rpx; */
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow: scroll;
+  display: flex;
+  /* border: 1rpx white solid; */
+}
+
+.danmakuListViewPusher {
+  width: 100%;
+  height: 100%;
+}
+
+.userName {
+  width: 100%;
+  height: 30px;
+  color: #3c3c3c;
+  line-height: 30px;
+  display: flex;
+  flex-flow : row;
+  padding-left: 5px;
+}
+
+.userName cover-view {
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 5px;
+}
+
+.danmakuListItemContainerPusher {
+  background-color: #adadad;
+  color: white;
+  margin-bottom: 1px;
+  opacity: 0.8;
+  width: 100%;
+  /* min-height: 20px;
+  height: auto; */
+  height: 30px;
+  line-height: 30px;
+  border-radius: 10rpx;
+  display: flex;
+  overflow: scroll;
+  overflow-y: scroll;
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+/* .danmakuListItemPusher {
+  position: absolute;
+  width: 100%;
+  min-height: 20px;
+  height: auto;
+  border-radius: 8rpx;
+  color: white;
+  background-color: #e0e0e0;
+  opacity: 0.3;
+  display: flex;
+}
+
+.danmakuUnamePusher {
+  color: 	#E0E0E0;
+}
+
+.danmakuContentPusher {
+  color: white;
+} */
+
+.danmakuSubmitView {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.danmakuListItemDetailPusher {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  opacity: 0.8;
+  min-height: 20px;
+  height: auto;
+  overflow: hidden;
+  padding-left: 15rpx;
+  background-color: #8e8e8e;
+}
+
+.danmakuItemDetailPusher {
+  height: 100%;
+  width: auto;
+  line-height: 20px;
+}
+
+input {
+  background-color: #bebebe;
+  width: 93%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  padding-left: 25rpx;
+  box-sizing: border-box;
+}
+
+.newDnamakuRemind {
+  position: absolute;
+  width: 150rpx;
+  height: 60rpx;
+  background-color: #e0e0e0;
+  opacity: 0.5;
+  border-radius: 10rpx;
+  left: 10;
+  bottom: 260px;
+  font-size: 35rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #ff2d2d;
+}
+
+.title_left {
+  left: -50px;
+  top: 200px;
+}
+
+.title_right {
+  right: -50px;
+  top: 100px;
+}
+
+.editView_left {
+  left: 10px;
+  top: 60px;
+}
+
+.editView_right {
+  right: 10px;
+  top: 220px;
+}
+
+.view-wrap_position {
+  left: 10px;
+}
+
+.danmakuListContainerViewPusher_middle {
+  left: 10px;
+  /* border: 1rpx white solid; */
+  width: 300px;
+  height: 217px;
+  bottom: 30px;
+  display: block;
+  flex-wrap: wrap;
+}
+
+.danmakuListContainerViewPusher_middle .danmakuListItemContainerPusher {
+  margin-bottom: 1px;
+}
+
+.danmakuListContainerViewPusher_left {
+  left: -20px;
+  /* border: 1rpx white solid; */
+  height: 217px;
+  width: 300px;
+  bottom: 50px;
+}
+
+.danmakuListContainerViewPusher_left .danmakuListItemContainerPusher {
+  position: absolute;
+  bottom: 0;
+}
+
+.danmakuListContainerViewPusher_right {
+  /* border: 1rpx white solid; */
+  display: block;
+  right: -20px;
+  bottom: 50px;
+  height: 217px;
+  width: 300px;
+}
+
+.danmakuListContainerViewPusher_right .danmakuListItemContainerPusher {
+  position: absolute;
+}
+
+.newDnamakuRemind_left {
+  left: 210px;
+  bottom: 50rpx;
+}
+
+.newDnamakuRemind_right {
+  right: 210px;
+  bottom: 50rpx;
+}
+
+/* 顺时针90度*/
+
+.rotate_danmaku_Clockwise90 {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -moz-transform: rotate(90deg); /* Firefox */
+  -webkit-transform: rotate(90deg); /* Safari and Chrome */
+  -o-transform: rotate(90deg); /* Opera */
+}
+
+/*逆时针90度（顺时针270 */
+
+.rotate_danmaku_Anti_Clockwise90 {
+  transform: rotate(270deg);
+  -ms-transform: rotate(270deg); /* IE 9 */
+  -moz-transform: rotate(270deg); /* Firefox */
+  -webkit-transform: rotate(270deg); /* Safari and Chrome */
+  -o-transform: rotate(270deg); /* Opera */
+}

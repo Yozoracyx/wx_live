@@ -1,0 +1,54 @@
+<form bindsubmit="searchSubmit" action="">
+  <view class='searchView'>
+    <input placeholder="输入主播名、房间名" focus='{{inputFocus}}' placeholder-class="placeholderStyle" value="{{inputValue}}" bindinput="saerchInput" bindconfirm="searchSubmit" confirm-type="search" />
+    <view class='cancelView' bindtap='cancel'>取消</view>
+  </view>
+</form>
+<view class='palyerView' hidden='{{showAllPalyerView}}'>
+  <view class='SeparateView'></view>
+  <view class='allPlayerList'>
+    <view class='playerViewTitle'>主播</view>
+    <view class='playerListItem' hidden="{{showPlayerView}}" wx:for="{{playerArray}}" id="{{item.roomid}}" bindtap="searchPlayer" wx:key="roomid">
+      <view class='playerListItemImg'>
+        <image src='{{item.avatarurl}}'></image>
+      </view>
+      <view class='playerListItemText'>
+        <view class='playerName playeItemrDetail'>{{item.nickname}}</view>
+        <view class='playerDetail playeItemrDetail'>{{item.playerTime}} 直播了 {{item.playerGame}}</view>
+        <view class='playerFansAndRoomId playeItemrDetail'>粉丝数: {{item.subscribeNum}} 房间号: {{item.roomid}}</view>
+      </view>
+    </view>
+    <view class="playerListItem hiddenPlayerListItem" hidden="{{!showPlayerView}}">
+      空空如也...
+    </view>
+  </view>
+</view>
+<view class='palyerView' hidden='{{showAllLivererView}}'>
+  <view class='SeparateView'></view>
+  <view class='allPlayerList'>
+    <view class='playerViewTitle'>直播</view>
+    <view class='allPlayListItem' wx:for="{{allPlayListArray}}" hidden="{{showLiveView}}" id="{{item.roomid}}" bindtap="searchAllPlay" wx:key="roomid">
+      <view class='allPlayListItemImg'>
+        <view class='allPlayListItemCate'>
+          {{item.type}}
+        </view>
+        <image src='{{item.coverSrc}}'></image>
+        <view class='allPlayListItem-detail'>
+          <view class='allPlayListItem-detail-playerName'>
+            {{item.anchorName}}
+          </view>
+          <view class='allPlayListItem-detail-Num'>
+            <image src='../../images/num.png'></image>
+            <text>{{item.onlinenum}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='allPlayListItemTitle'>
+        {{item.title}}
+      </view>
+    </view>
+    <view class="playerListItem hiddenPlayerListItem" hidden="{{!showLiveView}}">
+      空空如也...
+    </view>
+  </view>
+</view>

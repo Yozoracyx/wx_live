@@ -1,0 +1,149 @@
+<view class='audioViewContain' bindtap="livePlayerClick">
+  <live-player id="player" class='audioView' src="{{liveSrc}}" style="visibility:{{!visibility}}" bindstatechange="statechange" binderror="error" bindnetstatus="netstatus" orientation="{{orientation}}" autoplay="false" muted="{{muted}}" bindtap="livePlayerClick"
+    bindfullscreenchange="fullscreenchange">
+    <cover-view class='hiddenView' hidden='{{showHiddenView}}' bindtap="livePlayerClick" style='line-height:{{hiddenViewLineHeight}}px'>
+      <cover-view>{{loadingValue}} </cover-view>
+    </cover-view>
+    <!-- <cover-image class='hiddenView fullScreenHiddenView' style='height:{{windowHeight}}+200rpx;width:{{windowWidth}}px' src='../../images/dnf.jpg' hidden="{{showfullScreenHiddenView}}" bindtap="livePlayerClick">
+    </cover-image> hidden='{{showBottomAndTopView}}'-->
+    
+    <cover-view class='bottomView' hidden='{{showBottomAndTopView}}' style="bottom:{{fullScreenBottom}}px">
+      <cover-view class='playAndStopView' bindtap="bindPlayAndStop">
+        <cover-view wx:if="{{playFlag}}" class='view-wrap'>
+          <cover-image class='playAndStop' src="../../images/play.png"></cover-image>
+        </cover-view>
+        <cover-view wx:else class='view-wrap'>
+          <cover-image class='playAndStop' src="../../images/stop.png"></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='liveNumView'>
+        <cover-image src='../../images/num.png'></cover-image>
+        <cover-view class='liveNum'>: {{onlinenum}}</cover-view>
+      </cover-view>
+      <cover-view class='fullScreenDanmakuSubmit' hidden='{{showFullScreenDanmakuSubmit}}'>
+        <input value="{{fullScreenInputValue}}" bindinput="fullScreenDanmakuInput" confirm-type="send" focus="{{fullScreenInputFocus}}" bindfocus="fullScreenBindInputFocus" bindblur="fullScreenBindInputBlur"  adjust-position="{{false}}" bindconfirm="btnClick"/>
+        <cover-view class='fullScreenDanmakuContent' bindtap='fullScreenDanmakuViewClick'>{{fullScreenInputValue}}</cover-view>
+      </cover-view>
+      <cover-view class='minAndMaxView' bindtap="fullScreen">
+        <cover-view wx:if="{{fullScreenFlag}}" class='view-wrap'>
+          <cover-image class='minAndMax' src="../../images/small.png"></cover-image>
+        </cover-view>
+        <cover-view wx:else class='view-wrap'>
+          <cover-image class='minAndMax' src="../../images/full.png"></cover-image>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class='topView' hidden="{{showBottomAndTopView}}">
+      <cover-view class='clearView' bindtap="switchClear">
+        {{nowClearValue}}
+      </cover-view>
+    </cover-view>
+    <!-- <cover-view class='clearListView' hidden='{{showClearListView}}' bindtap='clearListViewClick'>
+      <cover-view class='clearViewListItem' style="color:{{clearItemColor1}};border-color: {{clearItemBorderColor1}}" id='super' bindtap='clearViewListItemClick'>{{superClear}}</cover-view>
+      <cover-view class='clearViewListItem' style="color:{{clearItemColor2}};border-color: {{clearItemBorderColor2}}" id='high' bindtap='clearViewListItemClick'>{{highClear}}</cover-view>
+      <cover-view class='clearViewListItem' style="color:{{clearItemColor3}};border-color: {{clearItemBorderColor3}}" id='standard' bindtap='clearViewListItemClick'>{{standardClear}}</cover-view>
+    </cover-view> -->
+    <cover-view class='clearListView' hidden='{{showClearListView}}' bindtap='clearListViewClick'>
+      <cover-view class='clearViewListItem' wx:for="{{lineArray}}">
+        <cover-view class='clearListViewLine normal'>{{item.lineName}}</cover-view>
+        <cover-view id="{{index}}" data-hi="high" class="clearListViewLine {{isCheckedArray[index].high?'is_checked':'normal'}}" bindtap='checkClear'>高清</cover-view>
+        <cover-view id="{{index}}" data-hi="standard" class="clearListViewLine {{isCheckedArray[index].standard?'is_checked':'normal'}}" bindtap='checkClear'>标清</cover-view>
+      </cover-view>
+    </cover-view>
+    <!-- <cover-view class='fullScreenRightView' hidden='{{showFullScreenRightView}}'>
+      <cover-view class='fullScreenBottomView'>
+        <cover-view class='fullScreenBottomPlayAndStopView rotate' wx:if="{{playFlag}}">
+          <cover-image src="../../images/play.png"></cover-image>
+        </cover-view>
+        <cover-view class='fullScreenBottomPlayAndStopView rotate' wx:else>
+          <cover-image src="../../images/stop.png"></cover-image>
+        </cover-view>
+        <cover-view class='fullScreenBottomSmallView' bindtap="fullScreen">
+          <cover-image src="../../images/small.png"></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class='fullScreenTopView' wx:for="{{lineArray}}">
+        <cover-view class="fullScreenLineView rotate ">{{item.lineName}}</cover-view>
+        <cover-view id="{{index}}" data-hi="high" class="fullScreenLineView rotate {{isCheckedArray[index].high?'is_checked':'normal'}}" bindtap='checkClear'>高清</cover-view>
+        <cover-view id="{{index}}" data-hi="standard" class="fullScreenLineView rotate {{isCheckedArray[index].standard?'is_checked':'normal'}}" bindtap='checkClear'>标清</cover-view>
+      </cover-view>
+    </cover-view> -->
+    <!-- <block wx:for="{{danmakuData}}" wx:key="dId">
+      <cover-view hidden="{{danmakuDisplay}}" style="animation: first {{item.time}}s linear forwards;top:{{item.top}}rpx" animation="animationData" class='danmakuItem'>
+        {{item.text}}
+      </cover-view>
+    </block> -->
+
+    <block wx:for="{{danmakuData}}" wx:key="dId">
+      <cover-view hidden="{{danmakuDisplay}}" style="top:{{item.top}}rpx;left:{{danmakuLeft}}px" animation="{{moveData}}" class='danmakuItem'>
+        {{item.text}}
+      </cover-view>
+    </block>
+     <!-- <cover-view class='test' style="top:0rpx;left:{{danmakuLeft}}px" animation="{{moveData}}">
+        大萨达撒
+      </cover-view> -->
+  </live-player>
+</view>
+<view class='navView' hidden='{{hiddenFullscreenView}}'>
+  <view class='navItem chatView' bindtap='clickNav' data-testid="1" style="color:{{navColor1}};border-bottom-color: {{borderBottomColor1}}">
+    聊天
+  </view>
+  <view class='navItem hostView' bindtap='clickNav' data-testid="2" style="color:{{navColor2}};border-bottom-color: {{borderBottomColor2}}">
+    主播
+  </view>
+  <!-- <view class='navItem typeView' bindtap='clickNav' data-testid="3" style="color:{{navColor3}};border-bottom-color: {{borderBottomColor3}}">
+    类型
+  </view> -->
+
+  <view wx:if="{{isSubscribe}}" class='navItem subscriptView' bindtap='subscribe' style='background-color: #F0F0F0' bindtap='subscribeClick'>
+    <view class='subscriptItemView'>
+      <image src='../../images/remind.png'></image>
+      <view class='subscriptDetailView' style='color:#8E8E8E'>
+        已订阅
+      </view>
+    </view>
+    <view class='fansNum' style='color:#FF8000'>{{subscribeNum}}</view>
+  </view>
+  <view wx:else class='navItem subscriptView' bindtap='subscribeClick'>
+    <view class='subscriptItemView'>
+      <image src='../../images/subscribe.png'></image>
+      <view class='subscriptDetailView'>
+        订阅
+      </view>
+    </view>
+    <view class='fansNum' style='color:white'>{{subscribeNum}}</view>
+  </view>
+</view>
+<scroll-view wx:if="{{showChatOrIntro}}" scroll-y="true" class='danmakuListView' scroll-top='{{scrollTop}}' hidden='{{hiddenFullscreenView}}'>
+  <block wx:for="{{danmakuListData}}" wx:key="dLId">
+    <view class='danmakuListItem' style="color:{{item.color}}">
+      <text style="color:{{item.unameColor}}">{{item.userName}}</text> : {{item.danmakuContent}}
+    </view>
+  </block>
+</scroll-view>
+<scroll-view wx:else scroll-y="true" class='danmakuListView introView' hidden='{{hiddenFullscreenView}}'>
+  <view class='liverHeadImgAndNameView'>
+    <view class='liverHeadImg'>
+      <image src='{{avatarurl}}'></image>
+    </view>
+    <view class='liverName'>
+      <view class='liverNameItem'>{{liverName}}</view>
+      <view class='liverTypeItem'>{{liverType}}</view>
+    </view>
+  </view>
+  <view class='liverIntroView'>
+    <text class='liverIntroViewTitle'>简介 :</text>
+    <text class='liverIntroViewContent'>{{intro}}</text>
+    <!-- <text class='liverIntroViewContent'>{{intro}}</text> -->
+  </view>
+  <view class='liverRecordView'>
+    <view class='liverIntroViewTitle'>直播录像 :</view>
+    <view wx:if="{{videoLoading}}" class='videoLoading' hidden='{{showliverRecord}}' bindtap='playVideoClick'>点击播放直播录像</view>
+    <video wx:else src="{{recordSrc}}" autoplay="{{autoplayFalse}}" enable-progress-gesture vslide-gesture-in-fullscreen enable-play-gesture controls="{{true}}" hidden='{{showliverRecord}}'></video>
+    <view class='liverIntroViewContent liverRecordContent' hidden='{{!showliverRecord}}'>暂无直播录像...</view>
+  </view>
+</scroll-view>
+<view hidden="{{!showChatOrIntro}}" class='danmakuSubmitView' style="bottom:{{bottom}}px">
+  <input placeholder="说点什么吧..." value="{{inputValue}}" adjust-position="{{false}}" bindinput="danmakuInput" bindfocus="inputFocus" bindblur="inputBlur" />
+  <button type="default" bindtap="btnClick">发送</button>
+</view>

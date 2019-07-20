@@ -1,0 +1,93 @@
+.container{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: #FF5809;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 36rpx;
+}
+.title{
+  width: 100%;
+  height: auto;
+  font-size: 50rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.liveTitleView{
+  width: 75%;
+  min-height: 80rpx;
+  height: auto;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 40rpx;
+  border: 1rpx #FF5809 solid;
+  border-radius: 10rpx;
+  padding-left: 2%;
+}
+.orientationPickerView{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.orientationPicker image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+input{
+  border-radius: 15rpx;
+  width: 75%;
+  padding-left: 10rpx;
+  font-size: 36rpx;
+  color: black;
+}
+.placeholderStyle{
+  font-size: 36rpx;
+}
+picker{
+  height: 50rpx;
+  width: auto;
+  color: black;
+  line-height: 60rpx;
+  margin: 0;
+  padding: 0;
+}
+.picker{
+  height: 50rpx;
+  width: 100%;
+  line-height: 50rpx;
+  border-radius: 15rpx;
+  font-size: 36rpx;
+  margin: 0;
+  padding: 0;
+}
+textarea{
+  width: 70%;
+  height: 300rpx;
+  line-height: 45rpx;
+  font-size:36rpx;
+  margin-top: 20rpx;
+  color: black;
+  border-radius: 15rpx;
+}
+.introView{
+  align-items: flex-start;
+  margin-bottom: 30rpx;
+}
+button{
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10rpx;
+  background-color: white;
+  border: 1rpx #FF5809 solid;
+  color: #FF5809;
+}
+.buttonView{
+  border: 0rpx;
+  padding: 0;
+}

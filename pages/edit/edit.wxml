@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='title'>
+    修改直播信息
+  </view>
+  <view class='liveTitleView'>
+    标题 ：
+    <input placeholder="输入直播间标题" placeholder-class="placeholderStyle" value='{{titleValue}}' bindinput="titleInput" />
+  </view>
+  <view class='liveTitleView'>
+    分类 ：
+    <picker bindchange="bindPickerChange" value="{{value}}" range="{{typeArray}}" range-key="type">
+      <view class="picker">
+        {{cateValue}}
+      </view>
+    </picker>
+  </view>
+  <view class='liveTitleView'>
+    画面方向 ：
+      <view class="orientationPickerView">
+        {{orientationValue}}
+        <image src='{{orientationImgSrc}}'></image>
+      </view>
+  </view>
+  <view class='liveTitleView introView'>
+    简介 ：
+    <textarea bindblur="bindTextAreaBlur" placeholder="输入直播间简介" bindinput="introInput" value='{{textareaValue}}' />
+  </view>
+  <view class='liveTitleView buttonView'>
+    <button bindtap='alterLiver' disabled='{{disabled}}'>修改</button>
+  </view>
+</view>

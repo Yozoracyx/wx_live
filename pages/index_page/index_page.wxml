@@ -1,0 +1,90 @@
+<view class='inputView' bindtap="inputFocus">
+  搜索主播、直播间
+</view>
+<view class='playListView'>
+  <view class='playListItem' wx:for='{{playListArray}}' id="{{item.cid}}" bindtap="searchPlayCate" wx:key="cid">
+    <view class='playListItemImg'>
+      <image src='{{item.playImgSrc}}'></image>
+    </view>
+    <view class='playListItemTitle'>
+      {{item.type}}
+    </view>
+  </view>
+</view>
+<view class='allPlayList'>
+  <view class='allPlayListTitleView'>
+    <view class='allPlayListTitleImg'>
+      <image src='../../images/player.png'></image>
+    </view>
+    <view class='allPlayListTitle'>
+      全部直播
+    </view>
+    <view class='morePlay'>
+      更多>
+    </view>
+  </view>
+  <view class='allPlayListItem' wx:for="{{allPlayListArray}}" hidden="{{showLiveView}}" id="{{item.roomid}}" bindtap="searchAllPlay" wx:key="roomid">
+    <view class='allPlayListItemImg'>
+      <view class='allPlayListItemCate'>
+        {{item.type}}
+      </view>
+      <image src='{{item.coverSrc}}'></image>
+      <view class='allPlayListItem-detail'>
+        <view class='allPlayListItem-detail-playerName'>
+          {{item.anchorName}}
+        </view>
+        <view class='allPlayListItem-detail-Num'>
+          <image src='../../images/num.png'></image>
+          <text>{{item.onlinenum}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='allPlayListItemTitle'>
+      {{item.title}}
+    </view>
+  </view>
+  <view class="hiddenAllPlayListItem" hidden="{{!showLiveView}}">
+    空空如也...
+  </view>
+</view>
+
+
+
+
+
+
+
+<!-- <view class='audioViewContain'>
+  <live-player id="player" class='audioView' src="{{liveSrc}}" bindstatechange="statechange" binderror="error">
+    <cover-view class='full_img_idv' bindtap="fullScreen">
+      <cover-view wx:if="{{fullScreenFlag}}">
+        <cover-view class='min'>缩小</cover-view>
+      </cover-view>
+      <cover-view wx:else>
+        <cover-view class='max'>全屏</cover-view>
+      </cover-view>
+    </cover-view>
+  </live-player>
+</view>
+
+<view class="page-body">
+  <view class="page-section tc">
+
+
+    <view class="btn-area">
+      <button bindtap="bindA" class="page-body-button" type="primary">观看</button>
+      <button bindtap="bindPlay" class="page-body-button" type="primary">播放</button>
+      <button bindtap="bindPause" class="page-body-button" type="primary">暂停</button>
+       <button bindtap="bindStop" class="page-body-button" type="primary">停止</button>
+      <button bindtap="bindResume" class="page-body-button" type="primary">恢复</button>
+      <button bindtap="bindMute" class="page-body-button" type="primary">静音</button> 
+      <scroll-view scroll-y="true" class='statusCodeListView' scroll-top='{{scrollTop}}rpx'>
+        <block wx:for="{{statusCodeListData}}" wx:key="sCId">
+          <view class='statusCodeListItem'>
+            <text>{{item.statusCode}}</text> : {{item.illustration}}
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view> -->

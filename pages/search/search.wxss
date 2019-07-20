@@ -1,0 +1,184 @@
+view{
+  box-sizing: border-box;
+}
+.searchView{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  padding-top: 10rpx;
+}
+input{
+  margin-left: 20rpx;
+  width: 75%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  padding-left: 30rpx;
+  background-color: #f0f0f0;
+}
+.cancelView{
+  width: 15%;
+  height: 60rpx;
+  padding: 0;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: #FF8000;
+}
+
+.palyerView{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.SeparateView{
+  width: 95%;
+  height: 15rpx;
+  background-color: #f0f0f0;
+}
+.allPlayerList{
+  height: auto;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+.playerViewTitle{
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+.playerListItem{
+  height: 160rpx;
+  width: 100%;
+  border-bottom: 0.1rpx #f0f0f0 solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center
+}
+.hiddenPlayerListItem{
+  justify-content: center;
+  align-items: center;
+  color: #bebebe;
+}
+.playerListItemImg{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  overflow: hidden;
+  margin-left: 5%;
+  padding: 0;
+}
+.playerListItemImg image{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.playerListItemText{
+  margin-left: 3%;
+  width: 70%;
+  height: 120rpx;
+}
+.playeItemrDetail{
+  width: 100%;
+  height: 40rpx;
+  font-size: 23rpx;
+  line-height: 40rpx;
+  color: #bebebe;
+}
+.playerName{
+  font-size: 31rpx;
+  font-weight: bolder;
+  color: black;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.allPlayListItem {
+  width: 350rpx;
+  height: 240rpx;
+  margin: 0 10rpx 20rpx 10rpx;
+}
+
+.allPlayListItemImg {
+  width: 100%;
+  height: 185rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+  /* border: 0.1px black solid; */
+}
+
+.allPlayListItemCate {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 2;
+  padding: 10rpx;
+  color: white;
+  font-size: 25rpx;
+  border-radius: 8rpx;
+  right: 5rpx;
+}
+
+.allPlayListItem-detail {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 40rpx;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allPlayListItem-detail-playerName {
+  color: #d0d0d0;
+  font-size: 25rpx;
+  margin-left: 15rpx;
+  width: 60%;
+  height: 40rpx;
+}
+
+.allPlayListItem-detail-Num {
+  width: 30%;
+  height: 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.allPlayListItem-detail-Num image {
+  margin-top: 5rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.allPlayListItem-detail-Num text {
+  color: #d0d0d0;
+  font-size: 20rpx;
+}
+
+.allPlayListItemImg>image {
+  position: absolute;
+  z-index: 1;
+}
+
+.allPlayListItemTitle {
+  width: 100%;
+  height: 55rpx;
+  line-height: 55rpx;
+  font-size: 27rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}

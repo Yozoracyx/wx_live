@@ -1,0 +1,120 @@
+<view class="page-body">
+  <view class="page-section tc" style='height:{{livePusherHeight}}rpx;'>
+    <live-pusher id="pusher" mirror="false" beauty="5" whiteness="5" url="{{pushSrc}}" bindstatechange="statechange" autopush='true'>
+
+
+      <cover-view class='title title_middle' hidden='{{hiddenDefault}}'>
+        {{title}}
+      </cover-view>
+
+      <cover-view class='title rotate_danmaku_Anti_Clockwise90 title_left' hidden='{{hidenClockwise90}}'>
+        {{title}}
+      </cover-view>
+
+      <cover-view class='title rotate_danmaku_Clockwise90 title_right' hidden='{{hidenAntiClockwise90}}'>
+        {{title}}
+      </cover-view>
+
+
+      <cover-view class='editView editView_middle' bindtap='editClick' hidden='{{hiddenDefault}}'>
+        <cover-image class='playAndStop' src="../../images/edit.png"></cover-image>
+      </cover-view>
+
+      <cover-view class='editView editView_left rotate_danmaku_Anti_Clockwise90' bindtap='editClick' hidden='{{hidenClockwise90}}'>
+        <cover-image class='playAndStop' src="../../images/edit.png"></cover-image>
+      </cover-view>
+
+      <cover-view class='editView editView_right rotate_danmaku_Clockwise90' bindtap='editClick' hidden='{{hidenAntiClockwise90}}'>
+        <cover-image class='playAndStop' src="../../images/edit.png"></cover-image>
+      </cover-view>
+
+
+
+      <cover-view wx:if="{{playFlag}}" class='view-wrap' bindtap='startAndStop' hidden='{{hiddenDefault}}'>
+        <cover-image class='playAndStop' src="../../images/play.png"></cover-image>
+      </cover-view>
+      <cover-view wx:else class='view-wrap' bindtap='startAndStop' hidden='{{hiddenDefault}}'>
+        <cover-image class='playAndStop' src="../../images/stop.png"></cover-image>
+      </cover-view>
+
+      <cover-view wx:if="{{playFlag}}" class='view-wrap' bindtap='startAndStop' hidden='{{hidenClockwise90}}'>
+        <cover-image class='playAndStop rotate_danmaku_Anti_Clockwise90' src="../../images/play.png"></cover-image>
+      </cover-view>
+      <cover-view wx:else class='view-wrap' bindtap='startAndStop' hidden='{{hidenClockwise90}}'>
+        <cover-image class='playAndStop rotate_danmaku_Anti_Clockwise90' src="../../images/stop.png"></cover-image>
+      </cover-view>
+
+      <cover-view wx:if="{{playFlag}}" class='view-wrap view-wrap_position' bindtap='startAndStop' hidden='{{hidenAntiClockwise90}}'>
+        <cover-image class='playAndStop rotate_danmaku_Clockwise90' src="../../images/play.png"></cover-image>
+      </cover-view>
+      <cover-view wx:else class='view-wrap view-wrap_position' bindtap='startAndStop' hidden='{{hidenAntiClockwise90}}'>
+        <cover-image class='playAndStop rotate_danmaku_Clockwise90' src="../../images/stop.png"></cover-image>
+      </cover-view>
+
+
+
+      <cover-view class='switchCamera' bindtap="bindSwitchCamera" hidden='{{hiddenDefault}}'>
+        <cover-image class='playAndStop' src="../../images/switch.png"></cover-image>
+      </cover-view>
+
+      <cover-view class='switchCamera rotate_danmaku_Anti_Clockwise90' bindtap="bindSwitchCamera" hidden='{{hidenClockwise90}}'>
+        <cover-image class='playAndStop' src="../../images/switch.png"></cover-image>
+      </cover-view>
+
+      <cover-view class='switchCamera rotate_danmaku_Clockwise90 view-wrap_position' bindtap="bindSwitchCamera" hidden='{{hidenAntiClockwise90}}'>
+        <cover-image class='playAndStop' src="../../images/switch.png"></cover-image>
+      </cover-view>
+
+
+      <cover-view class='newDnamakuRemind' hidden='{{hiddenDefault}}' wx:if='{{showNewDnamakuRemind}}'>
+        NEW!
+      </cover-view>
+      <cover-view class='newDnamakuRemind newDnamakuRemind_right rotate_danmaku_Clockwise90' hidden='{{hidenClockwise90}}' wx:if='{{showNewDnamakuRemind}}'>
+        NEW!
+      </cover-view>
+      <cover-view class='newDnamakuRemind newDnamakuRemind_left rotate_danmaku_Anti_Clockwise90' hidden='{{hidenAntiClockwise90}}' wx:if='{{showNewDnamakuRemind}}'>
+        NEW!
+      </cover-view>
+      <cover-view class='danmakuListContainerViewPusher danmakuListContainerViewPusher_middle' hidden='{{hiddenDefault}}'>
+        <block wx:for="{{danmakuListData}}" wx:key="dLId">
+          <cover-view class='danmakuListItemContainerPusher'>
+            <cover-view class='userName' style='color:{{item.color}}'>
+              <cover-view style='color:{{item.unameColor}}'>{{item.userName}} :</cover-view>
+              <cover-view>{{item.danmakuContent}}</cover-view>
+            </cover-view>
+          </cover-view>
+        </block>
+      </cover-view>
+      <cover-view class='danmakuListContainerViewPusher danmakuListContainerViewPusher_left rotate_danmaku_Clockwise90' hidden='{{hidenAntiClockwise90}}'>
+        <block wx:for="{{danmakuListData}}" wx:key="dLId">
+          <cover-view class='danmakuListItemContainerPusher' style='right:-{{item.left}}px'>
+            <cover-view class='userName' style='color:{{item.color}}'>
+              {{item.userName}} : {{item.danmakuContent}}
+            </cover-view>
+          </cover-view>
+        </block>
+      </cover-view>
+      <cover-view class='danmakuListContainerViewPusher danmakuListContainerViewPusher_right rotate_danmaku_Anti_Clockwise90' hidden='{{hidenClockwise90}}'>
+        <block wx:for="{{danmakuListData}}" wx:key="dLId">
+          <cover-view class='danmakuListItemContainerPusher' style='left:-{{item.left}}px'>
+            <cover-view class='userName' style='color:{{item.color}}'>
+              {{item.userName}} : {{item.danmakuContent}}
+            </cover-view>
+          </cover-view>
+        </block>
+      </cover-view>
+    </live-pusher>
+    <!-- <view class="btn-area">
+      <button bindtap="bindStart" class="page-body-button" type="primary">播放推流</button>
+      <button bindtap="bindPause" class="page-body-button" type="primary">暂停推流</button>
+      <button bindtap="bindStop" class="page-body-button" type="primary">停止推流</button>
+      <button bindtap="bindResume" class="page-body-button" type="primary">恢复推流</button>
+      <button bindtap="bindSwitchCamera" class="page-body-button" type="primary">切换前后摄像头</button>
+    </view> -->
+  </view>
+</view>
+<form bindsubmit="danmakuSubmit" action="">
+  <view class='danmakuSubmitView' style="bottom:0px" hidden='{{hiddenDanmakuSubmitView}}'>
+    <input placeholder="说点什么吧..." value="{{inputValue}}" cursor-spacing="0" bindinput="danmakuInput" bindfocus="inputFocus" bindblur="inputBlur" bindconfirm="danmakuSubmit" confirm-type="send" />
+  </view>
+</form>
